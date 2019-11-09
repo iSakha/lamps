@@ -169,7 +169,8 @@ ref.on('value', gotData, errData);
 
 let table = document.getElementById('tblLamps')
 console.log(table);
-table.style.border = '2px solid red';
+//table.style.border = '2px solid red';
+
 
 
 

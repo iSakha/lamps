@@ -6,11 +6,11 @@
 .header {
     background: orange;
   }
-
+ /* ==============================================  Menu  ======================================= */
 .menu {
     background: lightblue;
   }
-
+ /* ==============================================  Side  ======================================= */
 .side {
     background: lightgreen;
     float:left;
@@ -40,10 +40,18 @@
     margin-top: 10px;
 }
 
+ /* ==============================================  Tab1  ======================================= */
+
+#tab1 {
+    background: lightgrey;
+    min-height: calc(100vh - 80px);
+    display: none; 
+}
+
 table {
   border-collapse: collapse; 
   width: 80%; 
-  /* border: 2px solid red; */
+  border: 2px solid red; 
   
 } 
 
@@ -80,11 +88,15 @@ table tr:not(:first-child){
 }
 table tr:not(:first-child):hover{background-color: #f5f798;}
 
+ /* ==============================================  Tab2  ======================================= */
+
 #tab2 {
     background: lightsalmon;
     min-height: calc(100vh - 80px);
     display: none; 
 }
+
+ /* ==============================================  Tab3  ======================================= */
 
 #tab3 {
     background: burlywood;
@@ -92,11 +104,15 @@ table tr:not(:first-child):hover{background-color: #f5f798;}
     display: none; 
 }
 
+ /* ==============================================  Tab4  ======================================= */
+
 #tab4 {
     background: red;
     min-height: calc(100vh - 80px); 
     display: none; 
 }
+
+ /* ==============================================  Footer ======================================= */
 
 .footer {
     background: magenta;
