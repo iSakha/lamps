@@ -51,9 +51,16 @@
 table {
   border-collapse: collapse; 
   width: 80%; 
-  border: 2px solid red; 
-  
+  /* border: 2px solid red;  */ 
 } 
+
+.borderColorRed {
+    border: 2px solid red;
+}
+
+.borderColorGrey {
+    border: 2px solid lightgrey;
+}
 
 th, td {
 	border: 1px solid lightgrey;

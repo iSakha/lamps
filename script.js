@@ -145,14 +145,15 @@ let currentBase = 'lamps/test/store';
 var ref = database.ref(currentBase);
 
 function selectMode() {
+  let table = document.getElementById('tblLamps')
   if (this.value == 1) {
-    table.style.border = '2px solid red';
+    table.classList.add('borderColorRed');
     currentBase = 'lamps/real/store';
   } else {
     currentBase = 'lamps/test/store';
-    table.style.border = '2px solid green';
+    table.classList.add('borderColorGrey');
   }
-
+  console.log(table);
   // Got data
   ref = database.ref(currentBase);
 
@@ -167,9 +168,9 @@ createTable();
 ref = database.ref(currentBase);
 ref.on('value', gotData, errData);
 
-let table = document.getElementById('tblLamps')
-console.log(table);
-//table.style.border = '2px solid red';
+
+
+
 
 
 
