@@ -126,7 +126,14 @@ for (var i = 1; i <= keys.length; i++) {
   table.rows[i].cells[4].id = 'colFxt';
   table.rows[i].cells[7].id = 'colQty';
 }
-
+let testMode = document.getElementsByName('test/real');
+  if(testMode[0].checked) {
+    table.classList.add('borderColorGrey');
+  } else {
+    table.classList.add('borderColorRed');
+  }
+  
+  
 }
 
 let button = [];
@@ -145,15 +152,12 @@ let currentBase = 'lamps/test/store';
 var ref = database.ref(currentBase);
 
 function selectMode() {
-  let table = document.getElementById('tblLamps')
+
   if (this.value == 1) {
-    table.classList.add('borderColorRed');
     currentBase = 'lamps/real/store';
   } else {
     currentBase = 'lamps/test/store';
-    table.classList.add('borderColorGrey');
   }
-  console.log(table);
   // Got data
   ref = database.ref(currentBase);
 
@@ -165,7 +169,7 @@ testMode[0].addEventListener('change', selectMode);
 testMode[1].addEventListener('change', selectMode);
 
 createTable();
-ref = database.ref(currentBase);
+ref = database.ref("lamps/test/store");
 ref.on('value', gotData, errData);
 
 
