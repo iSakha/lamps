@@ -136,13 +136,22 @@ let testMode = document.getElementsByName('test/real');
   
 }
 
-let button = [];
+let matrixBase =[
+  ['lamps/test/store','lamps/test/in','lamps/test/out'],
+  ['lamps/real/store','lamps/real/in','lamps/real/out']
+];
+let selMode = 0;      //  initial mode is TestMode
+let button = [];      //  array of side buttons
 button = document.querySelectorAll('.sideButton');
-console.log(button);
+
+let btnValue;         //  btnValue define which tab selected
 
 for (let i = 0; i < 4; i++) {
+
   button[i].onclick = function (event) {
     let target = event.target;
+    btnValue = this.value;
+    console.log(matrixBase[selMode][btnValue]);
     changeTab(i)
   }
 }
@@ -158,11 +167,13 @@ function selectMode() {
   } else {
     currentBase = 'lamps/test/store';
   }
+
+  selMode = this.value;
   // Got data
   ref = database.ref(currentBase);
 
   ref.on('value', gotData, errData);
-
+  
 }
 
 testMode[0].addEventListener('change', selectMode);
@@ -171,6 +182,7 @@ testMode[1].addEventListener('change', selectMode);
 createTable();
 ref = database.ref("lamps/test/store");
 ref.on('value', gotData, errData);
+
 
 
 
