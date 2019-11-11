@@ -176,8 +176,21 @@ function changeTab(_i) {
   tab[_i].style.display = 'block';
 
     // Got data 
+    //ref = database.ref(currentBase);
+    // switch(_i) {
+    //   case 0: ref.on('value', gotData_1, errData);
+    //   console.log('store selected');
+    //   break;
+    //   case 1: ref.on('value', gotData_2, errData);
+    //   console.log('IN selected');
+    //   break;
+    //   case 2: ref.on('value', gotData_3, errData);
+    //   console.log('OUT selected');
+    //   break;
+    // }
     ref = database.ref(currentBase);
-    switch(_i) {
+
+    switch(btnValue) {
       case 0: ref.on('value', gotData_1, errData);
       console.log('store selected');
       break;
@@ -188,7 +201,14 @@ function changeTab(_i) {
       console.log('OUT selected');
       break;
     }
+
 }
+
+function myFunc() {  
+
+}
+  
+
 
 function errData(err) {
   console.log('Error!');
@@ -413,8 +433,8 @@ createTable_1();
 createTable_2();
 createTable_3();
 
-ref = database.ref("lamps/test/store");
-ref.on('value', gotData_1, errData);
+// ref = database.ref("lamps/test/store");
+// ref.on('value', gotData_1, errData);
 
 
 
