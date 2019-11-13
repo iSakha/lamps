@@ -1,0 +1,159 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+    background: orange;
+  }
+ /* ==============================================  Menu  ======================================= */
+.menu {
+    background: lightblue;
+  }
+ /* ==============================================  Side  ======================================= */
+.side {
+    background: lightgreen;
+    float:left;
+    min-height: calc(100vh - 80px);
+    width:160px;
+  }
+
+.radio {
+      margin-left: 25px;
+      margin-top: 8px;
+  }
+#switchTest_Real {
+    background: #caeaff; 
+    width:160px;
+    height:50px;
+    display:block;
+}
+
+.sideButton {
+    background: lightgrey;
+    width:140px;
+    height:30px;
+    margin-left: 10px
+}
+
+#firstBtn {
+    margin-top: 10px;
+}
+
+table {
+    border-collapse: collapse; 
+    width: 80%; 
+  } 
+  
+.borderColorRed {
+    border: 2px solid red;
+}
+
+.borderColorGrey {
+    border: 2px solid lightgrey;
+}
+
+th, td {
+	border: 1px solid lightgrey;
+	text-align: center;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size:10pt;
+    font-family:Verdana;
+}
+
+tr:nth-child(2n+1){
+    background:#eee;
+    }
+    
+tr:nth-child(2n){
+    background:#ddd;
+    }
+
+#colName, #colFxt {
+    text-align: left;
+}
+#colQty {
+    font-weight: bold;
+}
+
+th {
+    background: #f7edde;
+}
+
+table tr:not(:first-child){
+	cursor: pointer;transition: all .15s ease-in-out;
+}
+table tr:not(:first-child):hover{background-color: #f5f798;}
+
+ /* ==============================================  Tab2  ======================================= */
+
+
+ /* ==============================================  Tab1  ======================================= */
+
+ #tab1 {
+    background: #eb481f;
+    min-height: calc(100vh - 80px);
+    display: none; 
+}
+
+ /* ==============================================  Tab2  ======================================= */
+
+ #tab2 {
+    background: #d45656;
+    min-height: calc(100vh - 80px);
+    display: none; 
+}
+
+ /* ==============================================  Tab3  ======================================= */
+
+ #tab3 {
+    background: #df8181;
+    min-height: calc(100vh - 80px);
+    display: none; 
+}
+
+ /* ==============================================  Tab4  ======================================= */
+
+ #tab4 {
+    background: #f5c5c5;
+    min-height: calc(100vh - 80px);
+    display: none; 
+}
+
+ /* ==============================================  Tab5  ======================================= */
+
+ #tab5 {
+    background: #4f21f3;
+    min-height: calc(100vh - 80px);
+    display: none; 
+}
+
+ /* ==============================================  Tab6  ======================================= */
+
+ #tab6 {
+    background: #9841eb;
+    min-height: calc(100vh - 80px);
+    display: none; 
+}
+
+ /* ==============================================  Tab7  ======================================= */
+
+ #tab7 {
+    background: #838aeb;
+    min-height: calc(100vh - 80px);
+    display: none; 
+}
+
+ /* ==============================================  Tab8  ======================================= */
+
+ #tab8 {
+    background: #d3c6f3;
+    min-height: calc(100vh - 80px);
+    display: none; 
+}
+
+.footer {
+    background: magenta;
+    clear: both;
+  }

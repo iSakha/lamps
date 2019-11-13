@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript"></script>
+    <link href="style.css" rel="stylesheet">
+    <title>Lamps storage</title>
+
+    <!-- =========== Скрипт для работы с Firebase ================/-->
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+
+</head>
+
+<body>
+
+    <div class="header">Header</div>
+    <div class="menu">Menu</div>
+
+    <div class="side">
+        <div id='switchTest_Real'>
+            <p><input class='radio' name="test/real" type="radio" value="0" checked> TestMode</p>
+            <p><input class='radio' name="test/real" type="radio" value="1"> RealBase</p>
+        </div>
+        <p></p>
+        <button class="sideButton" id='firstBtn' value='0'>Лампы склад</button>
+        <button class="sideButton" value='1'>Приход</button>
+        <button class="sideButton" value='2'>Расход</button>
+        <button class="sideButton" value="3">Ввод данных</button>
+    </div>
+
+    <div class='tab' id='tab1'>
+        <div id="tbl1"></div>
+    </div>
+
+    <div class='tab' id='tab2'>
+        <div id="tbl2"></div>
+    </div>
+
+    <div class='tab' id='tab3'>
+        <div id="tbl3"></div>
+    </div>
+
+    <div class='tab' id='tab4'>
+        <div id="tbl4"></div>
+    </div>
+
+    <div class='tab' id='tab5'>
+        <div id="tbl5"></div>
+    </div>
+
+    <div class='tab' id='tab6'>
+        <div id="tbl6"></div>
+    </div>
+
+    <div class='tab' id='tab7'>
+        <div id="tbl7"></div>
+    </div>
+
+    <div class='tab' id='tab8'>
+        <div id="tbl8"></div>
+    </div>
+
+    <footer class="footer">Footer</footer>
+
+    <!-- =========== Скрипты для работы с Firebase ================/-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0//firebase.js"></script>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
