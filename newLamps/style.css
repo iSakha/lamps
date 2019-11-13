@@ -45,11 +45,11 @@ table {
     width: 80%; 
   } 
   
-.borderColorRed {
+table, .borderColorRed {
     border: 2px solid red;
 }
 
-.borderColorGrey {
+table, .borderColorGrey {
     border: 2px solid lightgrey;
 }
 

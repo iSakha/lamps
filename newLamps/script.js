@@ -1,8 +1,17 @@
 function changeTab(_i) {
+  let array_tbl_id  = ['lampStoreT','lampIN_T','lampOUT_T','','lampStoreR','lampIN_R','lampOUT_R',''];
     let tab = [];
+    let table = [];
+    let tbl_id = array_tbl_id[_i];
+    
     tab = document.querySelectorAll('.tab');
+    table = document.getElementById(tbl_id);
+    console.log(table);
     for (let i = 0; i < tab.length; i++) {
       tab[i].style.display = 'none';
+    if (switchMode[0].checked) {
+      table.classList.add('borderColorGrey');
+    }  else {table.classList.add('borderColorRed');}    
     }
     tab[_i].style.display = 'block';
 }
@@ -362,12 +371,7 @@ function gotData_1(data) {
     table.rows[i].cells[4].id = 'colFxt';
     table.rows[i].cells[7].id = 'colQty';
   }
-  // let testMode = document.getElementsByName('test/real');
-  if (switchMode[0].checked) {
-    table.classList.add('borderColorGrey');
-  } else {
-    table.classList.add('borderColorRed');
-  }
+
 }
 
 //------------------------------------------------------------------
@@ -410,21 +414,13 @@ function gotData_2(data) {
       cell.innerHTML = array[j];
     }
   }
-  // Hide first column of the table (with database keys)
-  // for (var i = 0; i <= keys.length; i++) {
-  //   table.rows[i].cells[0].style.display = 'none';
-  // }
+
   for (var i = 1; i <= keys.length; i++) {
     table.rows[i].cells[2].id = 'colName';
     table.rows[i].cells[4].id = 'colFxt';
     table.rows[i].cells[7].id = 'colQty';
   }
-  // let testMode = document.getElementsByName('test/real');
-  if (switchMode[0].checked) {
-    table.classList.add('borderColorGrey');
-  } else {
-    table.classList.add('borderColorRed');
-  }
+
 }
 
 //------------------------------------------------------------------
@@ -468,21 +464,13 @@ function gotData_3(data) {
       cell.innerHTML = array[j];
     }
   }
-  // Hide first column of the table (with database keys)
-  // for (var i = 0; i <= keys.length; i++) {
-  //   table.rows[i].cells[0].style.display = 'none';
-  // }
+
   for (var i = 1; i <= keys.length; i++) {
     table.rows[i].cells[2].id = 'colName';
     table.rows[i].cells[4].id = 'colFxt';
     table.rows[i].cells[7].id = 'colQty';
   }
-  // let testMode = document.getElementsByName('test/real');
-  if (switchMode[0].checked) {
-    table.classList.add('borderColorGrey');
-  } else {
-    table.classList.add('borderColorRed');
-  }
+
 }
 
 //------------------------------------------------------------------
@@ -593,12 +581,7 @@ function gotData_5(data) {
     table.rows[i].cells[4].id = 'colFxt';
     table.rows[i].cells[7].id = 'colQty';
   }
-  // let testMode = document.getElementsByName('test/real');
-  if (switchMode[0].checked) {
-    table.classList.add('borderColorGrey');
-  } else {
-    table.classList.add('borderColorRed');
-  }
+
 }
 
 //------------------------------------------------------------------
@@ -641,21 +624,13 @@ function gotData_6(data) {
       cell.innerHTML = array[j];
     }
   }
-  // Hide first column of the table (with database keys)
-  // for (var i = 0; i <= keys.length; i++) {
-  //   table.rows[i].cells[0].style.display = 'none';
-  // }
+
   for (var i = 1; i <= keys.length; i++) {
     table.rows[i].cells[2].id = 'colName';
     table.rows[i].cells[4].id = 'colFxt';
     table.rows[i].cells[7].id = 'colQty';
   }
-  // let testMode = document.getElementsByName('test/real');
-  if (switchMode[0].checked) {
-    table.classList.add('borderColorGrey');
-  } else {
-    table.classList.add('borderColorRed');
-  }
+
 }
 
 //------------------------------------------------------------------
@@ -699,21 +674,13 @@ function gotData_7(data) {
       cell.innerHTML = array[j];
     }
   }
-  // Hide first column of the table (with database keys)
-  // for (var i = 0; i <= keys.length; i++) {
-  //   table.rows[i].cells[0].style.display = 'none';
-  // }
+
   for (var i = 1; i <= keys.length; i++) {
     table.rows[i].cells[2].id = 'colName';
     table.rows[i].cells[4].id = 'colFxt';
     table.rows[i].cells[7].id = 'colQty';
   }
-  // let testMode = document.getElementsByName('test/real');
-  if (switchMode[0].checked) {
-    table.classList.add('borderColorGrey');
-  } else {
-    table.classList.add('borderColorRed');
-  }
+
 }
 
 //------------------------------------------------------------------
