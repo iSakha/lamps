@@ -30,7 +30,7 @@ let switchMode = document.getElementsByName('test/real');
         }
       }
 
-      function createInputs() {
+      function createInputs_T() {
 
         let myInput = document.createElement('input');
 
@@ -53,23 +53,115 @@ let switchMode = document.getElementsByName('test/real');
           }
           let myInputs = document.getElementsByTagName('input');
             myInputs[2].placeholder = 'Lamp';
-            myInputs[2].id = 'lamp';
+            myInputs[2].id = 'lampT';
             myInputs[3].placeholder = 'Fixture';
-            myInputs[3].id = 'fixture';
+            myInputs[3].id = 'fixtureT';
             myInputs[4].placeholder = 'Location';
-            myInputs[4].id = 'locat';
+            myInputs[4].id = 'locatT';
             myInputs[5].placeholder = 'Q-ty';
-            myInputs[5].id = 'qty';
+            myInputs[5].id = 'qtyT';
             myInputs[6].placeholder = 'Personnel';
-            myInputs[6].id = 'pers';
+            myInputs[6].id = 'persT';
             myInputs[7].placeholder = 'Notes1';
-            myInputs[7].id = 'notes1';
+            myInputs[7].id = 'notes1T';
             myInputs[8].placeholder = 'Notes2';
-            myInputs[8].id = 'notes2';
+            myInputs[8].id = 'notes2T';
             myInputs[9].placeholder = 'Reserve';
-            myInputs[9].id = 'reserve';
+            myInputs[9].id = 'reserveT';
       }
 
+      function createInputs_R() {
+
+        let myInput = document.createElement('input');
+
+        let parentMyInput = document.getElementById('inpt4');
+        parentMyInput.appendChild(myInput);
+        for (var i = 1; i < 5; i++) {
+          myInput = document.createElement('input');
+          parentMyInput = document.getElementById('inpt4');
+          parentMyInput.appendChild(myInput);
+          
+        }
+    
+    
+          parentMyInput = document.getElementById('inpt5');
+          parentMyInput.appendChild(myInput);
+          for (var i = 0; i < 3; i++) {
+            myInput = document.createElement('input');
+            parentMyInput = document.getElementById('inpt5');
+            parentMyInput.appendChild(myInput);
+          }
+          let myInputs = document.getElementsByTagName('input');
+            myInputs[10].placeholder = 'Lamp';
+            myInputs[10].id = 'lampR';
+            myInputs[11].placeholder = 'Fixture';
+            myInputs[11].id = 'fixtureR';
+            myInputs[12].placeholder = 'Location';
+            myInputs[12].id = 'locatR';
+            myInputs[13].placeholder = 'Q-ty';
+            myInputs[13].id = 'qtyR';
+            myInputs[14].placeholder = 'Personnel';
+            myInputs[14].id = 'persR';
+            myInputs[15].placeholder = 'Notes1';
+            myInputs[15].id = 'notes1R';
+            myInputs[16].placeholder = 'Notes2';
+            myInputs[16].id = 'notes2R';
+            myInputs[17].placeholder = 'Reserve';
+            myInputs[17].id = 'reserveR';
+      }
+      function createButtons_T() {
+
+        let myButton = document.createElement('button');
+        let parentMyButton = document.getElementById('inpt3');
+
+        parentMyButton.appendChild(myButton);
+        myButton.id = 'in';
+        myButton.innerHTML = 'Приход'
+    
+          myButton = document.createElement('button');
+          parentMyButton = document.getElementById('inpt3');
+          parentMyButton.appendChild(myButton);
+          myButton.id = 'out';
+          myButton.innerHTML = 'Расход'
+    
+      }
+
+      function createButtons_R() {
+
+        let myButton = document.createElement('button');
+        let parentMyButton = document.getElementById('inpt6');
+
+        parentMyButton.appendChild(myButton);
+        myButton.id = 'in';
+        myButton.innerHTML = 'Приход'
+    
+          myButton = document.createElement('button');
+          parentMyButton = document.getElementById('inpt6');
+          parentMyButton.appendChild(myButton);
+          myButton.id = 'out';
+          myButton.innerHTML = 'Расход'
+    
+      }
+
+//============== Set date today ==================================
+
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth() + 1; //January is 0!
+
+  var yyyy = today.getFullYear();
+  if (dd < 10) {
+    dd = '0' + dd;
+  }
+  if (mm < 10) {
+    mm = '0' + mm;
+  }
+  today = yyyy + '-' + mm + '-' + dd;
+
+  let inputDate = document.getElementById('date');
+  inputDate.value = today;
+
+  
 //===============   Store test table 1  ==================================
 
 function createTable_1() {
@@ -871,8 +963,11 @@ createTable_6();
 createTable_7();
 createTable_8();
 
-createInputs();
+createInputs_T();
+createInputs_R();
 
+createButtons_T();
+createButtons_R();
 
 // ============ Firebase Config ===============
 
